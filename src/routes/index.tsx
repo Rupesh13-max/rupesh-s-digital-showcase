@@ -157,10 +157,11 @@ function Portfolio() {
             ))}
           </ul>
           <a
-            href="mailto:rupeshvish01@gmail.com"
-            className="hidden rounded-full bg-primary px-4 py-2 text-sm font-medium text-primary-foreground transition-opacity hover:opacity-90 md:inline-flex"
+            href={resumeAsset.url}
+            download="Rupesh_Vishwakarma_resume.pdf"
+            className="hidden items-center gap-2 rounded-full bg-primary px-4 py-2 text-sm font-medium text-primary-foreground transition-opacity hover:opacity-90 md:inline-flex"
           >
-            Hire me
+            <Download className="size-4" /> Resume
           </a>
           <button
             aria-label="Toggle menu"
