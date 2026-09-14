@@ -184,6 +184,16 @@ function Portfolio() {
                 </a>
               </li>
             ))}
+            <li>
+              <a
+                href={resumeAsset.url}
+                download="Rupesh_Vishwakarma_resume.pdf"
+                onClick={() => setOpen(false)}
+                className="mt-1 flex items-center gap-2 rounded-md bg-primary px-3 py-2 text-sm font-medium text-primary-foreground"
+              >
+                <Download className="size-4" /> Download resume
+              </a>
+            </li>
           </ul>
         )}
       </header>
