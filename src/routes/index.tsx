@@ -2,6 +2,8 @@ import { createFileRoute } from "@tanstack/react-router";
 import { useState } from "react";
 import {
   ArrowUpRight,
+  Download,
+  FileText,
   Github,
   Linkedin,
   Mail,
@@ -9,6 +11,7 @@ import {
   Phone,
   X,
 } from "lucide-react";
+import resumeAsset from "@/assets/resume.pdf.asset.json";
 
 export const Route = createFileRoute("/")({
   head: () => ({
