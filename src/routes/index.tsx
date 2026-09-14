@@ -221,6 +221,13 @@ function Portfolio() {
               View projects <ArrowUpRight className="size-4" />
             </a>
             <a
+              href={resumeAsset.url}
+              download="Rupesh_Vishwakarma_resume.pdf"
+              className="inline-flex items-center gap-2 rounded-full border border-border px-6 py-3 text-sm font-medium transition-colors hover:border-primary/50 hover:text-primary"
+            >
+              <Download className="size-4" /> Download resume
+            </a>
+            <a
               href="#contact"
               className="inline-flex items-center gap-2 rounded-full border border-border px-6 py-3 text-sm font-medium transition-colors hover:border-primary/50 hover:text-primary"
             >
