@@ -2,6 +2,8 @@ import { createFileRoute } from "@tanstack/react-router";
 import { useState } from "react";
 import {
   ArrowUpRight,
+  Download,
+  FileText,
   Github,
   Linkedin,
   Mail,
@@ -9,6 +11,7 @@ import {
   Phone,
   X,
 } from "lucide-react";
+import resumeAsset from "@/assets/resume.pdf.asset.json";
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -40,6 +43,7 @@ const NAV = [
   { label: "Skills", href: "#skills" },
   { label: "Projects", href: "#projects" },
   { label: "Education", href: "#education" },
+  { label: "Resume", href: "#resume" },
   { label: "Contact", href: "#contact" },
 ];
 
@@ -154,10 +158,11 @@ function Portfolio() {
             ))}
           </ul>
           <a
-            href="mailto:rupeshvish01@gmail.com"
-            className="hidden rounded-full bg-primary px-4 py-2 text-sm font-medium text-primary-foreground transition-opacity hover:opacity-90 md:inline-flex"
+            href={resumeAsset.url}
+            download="Rupesh_Vishwakarma_resume.pdf"
+            className="hidden items-center gap-2 rounded-full bg-primary px-4 py-2 text-sm font-medium text-primary-foreground transition-opacity hover:opacity-90 md:inline-flex"
           >
-            Hire me
+            <Download className="size-4" /> Resume
           </a>
           <button
             aria-label="Toggle menu"
@@ -180,6 +185,16 @@ function Portfolio() {
                 </a>
               </li>
             ))}
+            <li>
+              <a
+                href={resumeAsset.url}
+                download="Rupesh_Vishwakarma_resume.pdf"
+                onClick={() => setOpen(false)}
+                className="mt-1 flex items-center gap-2 rounded-md bg-primary px-3 py-2 text-sm font-medium text-primary-foreground"
+              >
+                <Download className="size-4" /> Download resume
+              </a>
+            </li>
           </ul>
         )}
       </header>
@@ -205,6 +220,13 @@ function Portfolio() {
               className="inline-flex items-center gap-2 rounded-full bg-primary px-6 py-3 text-sm font-medium text-primary-foreground transition-opacity hover:opacity-90"
             >
               View projects <ArrowUpRight className="size-4" />
+            </a>
+            <a
+              href={resumeAsset.url}
+              download="Rupesh_Vishwakarma_resume.pdf"
+              className="inline-flex items-center gap-2 rounded-full border border-border px-6 py-3 text-sm font-medium transition-colors hover:border-primary/50 hover:text-primary"
+            >
+              <Download className="size-4" /> Download resume
             </a>
             <a
               href="#contact"
@@ -344,8 +366,54 @@ function Portfolio() {
           </div>
         </Section>
 
+        {/* Resume */}
+        <Section id="resume" title="Resume" kicker="06">
+          <div className="glow-card rounded-3xl p-6 sm:p-8">
+            <div className="flex flex-wrap items-center justify-between gap-4">
+              <div className="flex items-center gap-3">
+                <FileText className="size-6 text-primary" />
+                <div>
+                  <p className="font-display font-semibold">
+                    Rupesh_Vishwakarma_resume.pdf
+                  </p>
+                  <p className="text-xs text-muted-foreground">
+                    Full resume — education, skills, projects and leadership
+                  </p>
+                </div>
+              </div>
+              <div className="flex flex-wrap gap-3">
+                <a
+                  href={resumeAsset.url}
+                  download="Rupesh_Vishwakarma_resume.pdf"
+                  className="inline-flex items-center gap-2 rounded-full bg-primary px-5 py-2.5 text-sm font-medium text-primary-foreground transition-opacity hover:opacity-90"
+                >
+                  <Download className="size-4" /> Download
+                </a>
+                <a
+                  href={resumeAsset.url}
+                  target="_blank"
+                  rel="noreferrer"
+                  className="inline-flex items-center gap-2 rounded-full border border-border px-5 py-2.5 text-sm font-medium transition-colors hover:border-primary/50 hover:text-primary"
+                >
+                  Open in new tab <ArrowUpRight className="size-4" />
+                </a>
+              </div>
+            </div>
+            <object
+              data={resumeAsset.url}
+              type="application/pdf"
+              className="mt-6 hidden h-[70vh] w-full rounded-xl border border-border sm:block"
+              aria-label="Resume preview"
+            >
+              <p className="p-4 text-sm text-muted-foreground">
+                Preview unavailable — use the download button above.
+              </p>
+            </object>
+          </div>
+        </Section>
+
         {/* Contact */}
-        <Section id="contact" title="Get in touch" kicker="06">
+        <Section id="contact" title="Get in touch" kicker="07">
           <div className="glow-card rounded-3xl p-8 sm:p-12">
             <p className="max-w-xl text-base text-muted-foreground sm:text-lg">
               Have a project, role or idea in mind? I'd love to hear about it.
