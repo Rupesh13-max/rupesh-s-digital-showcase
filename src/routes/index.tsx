@@ -137,7 +137,7 @@ const LEADERSHIP = [
 function Portfolio() {
   const [open, setOpen] = useState(false);
 
-  const resumeUrl = `${import.meta.env.BASE_URL}Rupesh_Vishwakarma_resume.pdf`;
+
 
   return (
     <div className="min-h-screen bg-background text-foreground">
@@ -166,7 +166,7 @@ function Portfolio() {
           </ul>
 
           <a
-            href={resumeUrl}
+          href={`${import.meta.env.BASE_URL}Rupesh_Vishwakarma_resume.pdf`}
             download="Rupesh-Vishwakarma-Resume.pdf"
             className="hidden items-center gap-2 rounded-full bg-primary px-4 py-2 text-sm font-medium text-primary-foreground transition-opacity hover:opacity-90 md:inline-flex"
           >
@@ -203,7 +203,7 @@ function Portfolio() {
 
             <li>
               <a
-                href={resumeUrl}
+                href={`${import.meta.env.BASE_URL}Rupesh_Vishwakarma_resume.pdf`}
                 download="Rupesh-Vishwakarma-Resume.pdf"
                 onClick={() => setOpen(false)}
                 className="mt-1 flex items-center gap-2 rounded-md bg-primary px-3 py-2 text-sm font-medium text-primary-foreground"
@@ -246,7 +246,7 @@ function Portfolio() {
             </a>
 
             <a
-              href={resumeUrl}
+              href={`${import.meta.env.BASE_URL}Rupesh_Vishwakarma_resume.pdf`}
               download="Rupesh-Vishwakarma-Resume.pdf"
               className="inline-flex items-center gap-2 rounded-full border border-border px-6 py-3 text-sm font-medium transition-colors hover:border-primary/50 hover:text-primary"
             >
@@ -452,7 +452,7 @@ function Portfolio() {
 
               <div className="flex flex-wrap gap-3">
                 <a
-                  href={resumeUrl}
+                 href={`${import.meta.env.BASE_URL}Rupesh_Vishwakarma_resume.pdf`}
                   download="Rupesh-Vishwakarma-Resume.pdf"
                   className="inline-flex items-center gap-2 rounded-full bg-primary px-5 py-2.5 text-sm font-medium text-primary-foreground transition-opacity hover:opacity-90"
                 >
@@ -461,7 +461,7 @@ function Portfolio() {
                 </a>
 
                 <a
-                  href={resumeUrl}
+                 href={`${import.meta.env.BASE_URL}Rupesh_Vishwakarma_resume.pdf`}
                   target="_blank"
                   rel="noopener noreferrer"
                   className="inline-flex items-center gap-2 rounded-full border border-border px-5 py-2.5 text-sm font-medium transition-colors hover:border-primary/50 hover:text-primary"
@@ -473,7 +473,7 @@ function Portfolio() {
             </div>
 
             <object
-              data={resumeUrl}
+              data={`${import.meta.env.BASE_URL}Rupesh_Vishwakarma_resume.pdf`}
               type="application/pdf"
               className="mt-6 hidden h-[70vh] w-full rounded-xl border border-border sm:block"
               aria-label="Rupesh Vishwakarma Resume Preview"
