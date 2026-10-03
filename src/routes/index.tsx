@@ -83,6 +83,18 @@ const PROJECTS = [
       "Category budgets, recurring expenses and savings progress in a responsive React interface.",
     ],
   },
+  {
+    name: "StockSense – Stock Price Prediction App",
+    tagline: "A Python-based stock market analysis and price prediction application.",
+    year: "2026",
+    stack: ["Python", "Streamlit", "Pandas", "Scikit-learn", "yFinance", "Matplotlib"],
+    points: [
+      "Built a Streamlit application that fetches historical stock market data using yFinance and processes OHLCV data.",
+      "Implemented technical indicators including MA20, MA50, and RSI for stock market analysis.",
+      "Built a Random Forest Regression model to generate model-based stock price predictions and evaluated it using Mean Absolute Error (MAE).",
+      "Added actual vs predicted visualizations, 7-day future price predictions, and CSV download functionality.",
+    ],
+  },
 ];
 
 const EDUCATION = [
@@ -440,7 +452,7 @@ function Section({
   children: React.ReactNode;
 }) {
   const sectionRef = useRef<HTMLElement>(null);
-  const [isVisible, setIsVisible] = useState(false);
+  const [isVisible, setIsVisible] = useState(true);
 
   useEffect(() => {
     const section = sectionRef.current;
